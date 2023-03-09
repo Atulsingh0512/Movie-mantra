@@ -2,7 +2,6 @@
 
 
 import { initializeApp } from "firebase/app";
-//import { getAnalytics } from "firebase/analytics";
 import { getFirestore ,collection} from "firebase/firestore";
 
 const firebaseConfig = {
@@ -15,8 +14,9 @@ const firebaseConfig = {
   measurementId: "G-BN9J9EPQ6N"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db=getFirestore(app);
-export const moviesRef=collection(db,"movies");
+export const db = getFirestore(app);
+export const moviesRef = collection(db, "movies");
+export const reviewsRef = collection(db, "reviews");
+export const usersRef = collection(db, "users");
 export default app;
